@@ -48,6 +48,6 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public boolean newFeature() {
-		return true;
+		return false;
 	}
 }
