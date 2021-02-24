@@ -44,6 +44,11 @@ public class TrainSystemTest {
 	}
 
 	@Test
+	public void NewFeatureStandaloneTest() {
+		Assert.assertTrue(controller.newFeature());
+	}
+
+	@Test
 	public void OverridingJoystickPositionToNegative_SetsReferenceSpeedToZero() {
 		user.overrideJoystickPosition(4);
 		controller.followSpeed();
