@@ -3,6 +3,6 @@ on: push
 jobs:
   imsc-job:
     steps:
-      run: |
-        ./gradlew build
-        ./gradlew test
+      - run: |
+          ./gradlew build
+          ./gradlew test
