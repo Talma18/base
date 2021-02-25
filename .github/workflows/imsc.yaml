@@ -2,6 +2,7 @@ name: iMSC
 on: push
 jobs:
   imsc-job:
+    runs-on: ubuntu-latest
     steps:
       - run: |
           ./gradlew build
