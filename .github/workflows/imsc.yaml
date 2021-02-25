@@ -2,6 +2,7 @@ name: iMSC
 on: push
 jobs:
   imsc-job:
-    run: |
-      ./gradlew build
-      ./gradlew test
+    steps:
+      run: |
+        ./gradlew build
+        ./gradlew test
