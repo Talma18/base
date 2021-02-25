@@ -12,4 +12,9 @@ public class TachographImpl implements  Tachograph{
     public void addRecord(int measurement_time, int joystick_position, int reference_speed) {
         table.put(measurement_time, joystick_position, reference_speed);
     }
+
+    @Override
+    public int getSpeed(int time, int position) {
+        return table.get(time, position);
+    }
 }
