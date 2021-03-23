@@ -9,6 +9,7 @@ public class TrainControllerImpl implements TrainController {
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
+	private Timer timer;
 
 	@Override
 	public void followSpeed() {
@@ -48,7 +49,9 @@ public class TrainControllerImpl implements TrainController {
 	}
 
 	private class UpdateSpeedTask extends TimerTask {
+
 		private TrainController controller;
+
 		public UpdateSpeedTask(TrainController controller) {
 			this.controller = controller;
 		}
@@ -60,7 +63,7 @@ public class TrainControllerImpl implements TrainController {
 	}
 
 	private void starTimer(long unit) {
-		Timer timer = new Timer();
+		timer = new Timer();
 		timer.schedule(new UpdateSpeedTask(this), 0, unit);
 	}
 
