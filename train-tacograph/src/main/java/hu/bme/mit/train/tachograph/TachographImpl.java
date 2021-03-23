@@ -9,8 +9,8 @@ public class TachographImpl implements  Tachograph{
     Table<Integer, Integer, Integer> table = HashBasedTable.create();
 
     @Override
-    public void addRecord(int measurement_time, int joystick_position, int reference_speed) {
-        table.put(measurement_time, joystick_position, reference_speed);
+    public void addRecord(int measurementTime, int joystickPosition, int referenceSpeed) {
+        table.put(measurementTime, joystickPosition, referenceSpeed);
     }
 
     @Override
