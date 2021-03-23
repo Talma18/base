@@ -47,4 +47,9 @@ public class TrainSensorTest {
         sensor.overrideSpeedLimit(5);
         verify(mockUser, times(1)).setAlarmState(true);
     }
+
+    @Test
+    public void TestGetSpeedLimit() {
+        Assert.assertEquals(50, sensor.getSpeedLimit());
+    }
 }
